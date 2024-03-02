@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>{{ page_title }}</title>
+{% endblock %}
+{% block content %}
+  <div class="body-random-recipies">
+    {% for recipe in recipies %}
+      <div class="body-random-recipies-item">
+        <a href="/recipe/{{ recipe.id }}/">
+          <h3>{{ recipe.title }}</h3>
+        </a>
+        <p>Описание: {{ recipe.description }}</p>
+        <p>Время приготовления: {{ recipe.time_minutes }} минут</p>
+        <img src="{{ recipe.image.url }}" alt="recipe image">
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

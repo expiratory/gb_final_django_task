@@ -1,0 +1,190 @@
+a {
+  text-decoration: none;
+  color: sienna;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  background-color: bisque;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.header-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-auth a {
+  font-size: 18px;
+}
+
+.header-title h1 {
+  font-size: 32px;
+  color: saddlebrown;
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.header-nav a {
+  font-size: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: bisque;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer p {
+  font-size: 16px;
+  color: sienna;
+}
+
+.body {
+  min-height: 75vh;
+  background-color: cornsilk;
+}
+
+.body-random-recipies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.body-random-recipies-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 100px 100px 100px;
+}
+
+
+
+.body-random-recipies-item a h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.body-random-recipies-item p {
+  font-size: 18px;
+  color: sienna;
+  text-align: center;
+}
+
+.body-random-recipies-item img {
+  height: 50%;
+}
+
+.body-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-recipe h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: sienna;
+}
+
+.body-recipe p {
+  font-size: 18px;
+  color: sienna;
+  text-align: center;
+}
+
+.body-recipe img {
+  height: 300px;
+}
+
+.body-all-recipies {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.body-all-recipies table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  color: sienna;
+  font-size: 18px;
+}
+
+.body-add-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.body-add-recipe h3 {
+  margin-top: 40px;
+  font-size: 24px;
+  color: sienna;
+  font-weight: bold;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.auth h3 {
+  margin-top: 40px;
+  font-size: 24px;
+  color: sienna;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 150px;
+}
+
+form label {
+  text-align: center;
+  font-size: 18px;
+  color: sienna;
+}
+
+form input, label {
+  display: block;
+}
+
+form input, textarea, select, button {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 400px;
+}
+
+form button {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 24px;
+  color: sienna;
+  background-color: bisque;
+}

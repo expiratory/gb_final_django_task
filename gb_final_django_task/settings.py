@@ -28,10 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True if getenv("DEBUG") == "True" else False
-DEBUG = True
+DEBUG = True if getenv("DEBUG") == "True" else False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'expiratory.pythonanywhere.com']
 
 
 # Application definition
@@ -83,8 +82,15 @@ WSGI_APPLICATION = 'gb_final_django_task.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': getenv('MYSQL_DBNAME'),
+        'USER': getenv('MYSQL_USER'),
+        'PASSWORD': getenv('MYSQL_PASSWORD'),
+        'HOST': getenv('MYSQL_HOST'),
+        'OPTIONS': {
+            'init_command': "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }
     }
 }
 
@@ -127,6 +133,10 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static_dev'
+]
+
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -135,3 +145,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# login/logout
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
