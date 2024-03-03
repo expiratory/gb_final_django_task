@@ -57,14 +57,10 @@ a {
   color: sienna;
 }
 
-.body {
-  min-height: 75vh;
-  background-color: cornsilk;
-}
-
 .body-random-recipies {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10vh;
 }
 
 .body-random-recipies-item {
@@ -72,10 +68,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 100px 100px 100px;
+  height: 35vh;
 }
-
-
 
 .body-random-recipies-item a h3 {
   font-size: 24px;
@@ -162,7 +156,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 150px;
+  margin-bottom: 15vh;
 }
 
 form label {
@@ -187,4 +181,37 @@ form button {
   font-size: 24px;
   color: sienna;
   background-color: bisque;
+}
+
+@media (max-width: 810px) {
+  .header {
+    flex-direction: column;
+    height: 35vh;
+    gap: 30px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+  }
+
+  .header-nav a {
+    font-size: 18px;
+  }
+
+  .body-random-recipies {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .table-tablets-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  form input, textarea, select, button {
+    width: 200px;
+  }
 }

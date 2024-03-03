@@ -8,17 +8,17 @@
       <tr>
         <th>Название рецепта</th>
         <th>Описание</th>
-        <th>Время приготовления</th>
-        <th>Автор</th>
-        <th>Категория</th>
+        <th class="table-tablets-mobile">Время приготовления</th>
+        <th class="table-tablets-mobile">Автор</th>
+        <th class="table-tablets-mobile">Категория</th>
       </tr>
       {% for recipe in recipies %}
         <tr>
           <td><a href="/recipe/{{ recipe.id }}/">{{ recipe.title }}</a></td>
           <td>{{ recipe.description }}</td>
-          <td>{{ recipe.time_minutes }}</td>
-          <td>{{ recipe.author.username }}</td>
-          <td>{{ recipe.category.title }}</td>
+          <td class="table-tablets-mobile">{{ recipe.time_minutes }}</td>
+          <td class="table-tablets-mobile">{{ recipe.author.username }}</td>
+          <td class="table-tablets-mobile">{{ recipe.category.title }}</td>
         </tr>
       {% endfor %}
     </table>

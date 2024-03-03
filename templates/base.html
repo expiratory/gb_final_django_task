@@ -9,7 +9,7 @@
   {% block title %}
   {% endblock %}
 </head>
-<body>
+<body bgcolor="#fff8dc">
 <div class="header">
   <div class="header-auth">
     {% if user.is_authenticated %}
@@ -28,10 +28,8 @@
     <a href="/add_recipe/">Добавить рецепт</a>
   </div>
 </div>
-<div class="body">
-  {% block content %}
-  {% endblock %}
-</div>
+{% block content %}
+{% endblock %}
 <div class="footer">
   <p>Сайт рецептов. Все права защищены.</p>
 </div>
