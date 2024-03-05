@@ -9,9 +9,12 @@
         <a href="/recipe/{{ recipe.id }}/">
           <h3>{{ recipe.title }}</h3>
         </a>
-        <p>Описание: {{ recipe.description }}</p>
+        <br>
         <p>Время приготовления: {{ recipe.time_minutes }} минут</p>
+        <br>
         <img src="{{ recipe.image.url }}" alt="recipe image">
+        <br>
+        <p>Автор: {{ recipe.author.username }}</p>
       </div>
     {% endfor %}
   </div>
