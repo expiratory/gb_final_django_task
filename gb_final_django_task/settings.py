@@ -28,7 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if getenv("DEBUG") == "True" else False
+DEBUG = True if getenv("DEBUG") == "True" else False  # prod
+# DEBUG = True  # local
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'expiratory.pythonanywhere.com']
 
@@ -80,6 +81,15 @@ WSGI_APPLICATION = 'gb_final_django_task.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# local
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# prod
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
